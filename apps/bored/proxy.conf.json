@@ -1,5 +1,9 @@
 {
-  "/api": {
+  "/activity": {
+    "target": "http://localhost:3333",
+    "secure": false
+  },
+  "/user": {
     "target": "http://localhost:3333",
     "secure": false
   }

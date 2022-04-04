@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    max-width: 200px;
+    flex-direction: column;
+
+    & > * {
+        width: 200px;
+    }
+}
+
+.label{
+    display: block;
+}

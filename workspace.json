@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
+    "api-constants": "libs/api-constants",
     "api-interfaces": "libs/api-interfaces",
     "bored": "apps/bored",
     "bored-e2e": "apps/bored-e2e"
