@@ -1,0 +1,28 @@
+{
+  "root": "apps/bored-e2e",
+  "sourceRoot": "apps/bored-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/bored-e2e/cypress.json",
+        "devServerTarget": "bored:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "bored:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/bored-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["bored"]
+}
