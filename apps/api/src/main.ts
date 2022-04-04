@@ -1,16 +1,16 @@
 import * as express from 'express';
-import { Message } from '@finn-ai-coding-challenge/api-interfaces';
+
+import { registerActivityController } from './app/controllers/activity.controller';
+import { registerUserController } from './app/controllers/user.controller';
 
 const app = express();
+app.use(express.json());
 
-const greeting: Message = { message: 'Welcome to api!' };
-
-app.get('/api', (req, res) => {
-  res.send(greeting);
-});
+registerActivityController(app);
+registerUserController(app);
 
 const port = process.env.port || 3333;
 const server = app.listen(port, () => {
-  console.log('Listening at http://localhost:' + port + '/api');
+  console.log('Listening at http://localhost:' + port);
 });
 server.on('error', console.error);
