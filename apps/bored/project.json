@@ -62,7 +62,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/bored"],
       "options": {
-        "jestConfig": "apps/bored/jest.config.js",
+        "jestConfig": "apps/bored/jest.config.ts",
         "passWithNoTests": true
       }
     }
